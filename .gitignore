@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,git,c++,c,windows,python,linux
-# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,git,c++,c,windows,python,linux
+# Created by https://www.toptal.com/developers/gitignore/api/windows,c,c++,python,linux,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=windows,c,c++,python,linux,visualstudiocode
 
 ### C ###
 # Prerequisites
@@ -73,21 +73,6 @@ dkms.conf
 *.lai
 
 # Executables
-
-### Git ###
-# Created by git for backups. To disable backups in Git:
-# $ git config --global mergetool.keepBackup false
-*.orig
-
-# Created by git when using merge tools for conflicts
-*.BACKUP.*
-*.BASE.*
-*.LOCAL.*
-*.REMOTE.*
-*_BACKUP_*.txt
-*_BASE_*.txt
-*_LOCAL_*.txt
-*_REMOTE_*.txt
 
 ### Linux ###
 *~
@@ -320,4 +305,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,git,c++,c,windows,python,linux
+# End of https://www.toptal.com/developers/gitignore/api/windows,c,c++,python,linux,visualstudiocode
