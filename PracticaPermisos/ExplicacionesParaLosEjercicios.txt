@@ -1,3 +1,10 @@
+TABLA DE PERMISOS
+
+4 → Lectura (r)
+2 → Escritura (w)
+1 → Ejecución (x)
+
+
 Ejercicio 1
 📁 Archivo: registro.log
 🔹 Requisitos:
@@ -79,7 +86,7 @@ Ejercicio 9
 🔹 Requisitos:
 Solo el dueño puede ejecutar el archivo.
 Todos los demás pueden ejecutarlo pero no modificarlo.
-✅ Permiso esperado:      chmod 144 solo_ejecuccion 
+✅ Permiso esperado:      chmod 111 solo_ejecuccion 
 
 
 
