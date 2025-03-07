@@ -1,6 +1,6 @@
 Soluciones
 
-link de github: 
+link del repositorio en github: https://github.com/gabogg21/GabrielGironIMT231/tree/main/tpPracticoPermisos
 
 Ejercicio 1: Configurar Permisos de Archivos Individuales
 
