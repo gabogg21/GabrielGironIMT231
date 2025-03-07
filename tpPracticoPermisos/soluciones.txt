@@ -1,22 +1,53 @@
-Soluciones 
+Soluciones
+
+link de github: 
 
 Ejercicio 1: Configurar Permisos de Archivos Individuales
 
-Solucion: EL ejercicio nos pide que escribir en el archivo documento1.txt, primero 
+Solucion: EL ejercicio nos pide escribir en el archivo documento1.txt, primero 
 se dan los permisos correspondientes teniendo en cuenta los requisitos:
 - El propietario puede leer y escribir.
 - El grupo puede leer.
 - Otros usuarios NO pueden acceder.
-se usa el comando ' chmod 640 documento1.txt '  en la terminal para dar los permisos y
+Se usa el comando 'correspondiente en la terminal para dar los permisos:
+' chmod 640 documento1.txt '
 posteriormente se usa otro comando comando en la terminal para cumplir con la orden del 
-ejercicio de escribir nuestro nombre y el Sistema Operativo de nuestra computadora en el 
-archivo 'echo "Nombre: Gabriel Efrain Giron Calle -- Version del Sistema Operativo:Ubuntu 24.04.1 LTS" > documento1.txt '
+ejercicio de escribir nuestro nombre y nuestro Sistema Operativo:
+'echo "Nombre: Gabriel Efrain Giron Calle -- Version del Sistema Operativo: Ubuntu 24.04.1 LTS" > documento1.txt '
+Finalmente ejecutamos el archivo.
 
 Ejercicio 2: Hacer un Script Ejecutable
 
-Solucion: El ejercicio nos pide ealizar un scrip el cual debe pedir al usuario su nombre 
+Solucion: El ejercicio nos pide realizar un script el cual debe pedir al usuario su nombre 
 y responder con un saludo formal mostrando el nombre de entrada y por ultimo que imprima 
 en terminal, primeramente se dan los permisos correspondientes a los requisitos:
 - El propietario puede leer, escribir y ejecutar.
 - El grupo y otros usuarios pueden solo ejecutarlo.
-se usa el comando ' chmod 711 script.sh ' en la terminal para dar los permisos.
+Para dar los permisos en la terminal se usa el comando:
+' chmod 711 script.sh '
+Posteriormente editamos el archivo script.sh para que nos pida el nombre de usuario y nos 
+salude; colocamos las sigueintes lineas de codigo en la terminal para editar el script:
+- echo 'echo "Ingrese su nombre"' > script.sh
+- echo 'read nombre' >> script.sh
+- echo 'echo "Hola, $nombre"' >> script.sh
+Finalmente ejecutamos el script y vemos que todo este correcto.
+
+Ejercicio 3: Protección de un Archivo de Configuración
+
+Solucion: El ejercicio nos pide dar los persmisos correspondientes para el manejo del
+archivo config.cfg, se deben cumplir los siguientes requisitos:
+- Solo el propietario puede leer y escribir.
+- Nadie más debe poder acceder.
+Dados los requisitos se aplican los sigueintes permisos en terminal:
+'chmod 600 config.cfg'.
+Finalmente se ejecuta el archivo para verificar su correcto funcionamiento
+
+Ejercicio 4: Archivo Secreto
+
+Solucion: El ejercicio nos pide dar los persmisos correspondientes para el manejo del
+archivo secreto.key , se deben cumplir los siguientes requisitos:
+- Solo el propietario puede leerlo.
+- Nadie más debe tener acceso.
+Dados los requisitos se aplican los sigueintes permisos en terminal:
+'chmod 400 secreto.key'
+Finalmente se ejecuta el archivo para verificar su correcto funcionamiento
