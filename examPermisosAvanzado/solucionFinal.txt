@@ -1,0 +1,25 @@
+Soluciones del examen
+
+Tarea 2
+
+chmod 600 credentials.txt 
+chmod 600 configMain.cfg 
+
+Tarea 3
+
+chmod 777 publicZone/
+chmod 111 runPublic.sh
+
+Tarea 4
+
+chmod 760 sharedScript.sh.
+
+Tarea 5
+
+chmod 600 logMain.log 
+chmod 600 logDaily.log 
+
+Tarea 6
+
+chmod 100 cleanSystem.sh 
+chmod 114 findData.sh 
