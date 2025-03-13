@@ -90,5 +90,6 @@ el comandop tree en sì sirve para mostrar en formato de "arbol" con sus ramas
 el contenido de un directorio
 - Permiso octal para `entregaFinal.txt`: chmod 555 entregaFinal
 
-- Comandos usados y justificaciones :
+- Comandos usados y justificaciones : copie la salida del tree -p al entregraFinal.txt
+usando el editor en nano, "nano entregaFinal" 
 
