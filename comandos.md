@@ -67,3 +67,40 @@ read nombre
 echo "Hola, $nombre"
 ```
 ## * COMO LO EJECUTO?
+
+
+Permisos
+
+En Linux, los permisos de ejecución, lectura y escritura son fundamentales para gestionar el acceso a archivos y directorios. El permiso de lectura (r) permite a los usuarios visualizar el contenido de un archivo o directorio, mientras que el permiso de escritura (w) les permite modificar el contenido del archivo o directorio, incluyendo la capacidad de eliminar el archivo si se tiene permisos de escritura. Por otro lado, el permiso de ejecución (x) permite ejecutar un archivo como una aplicación o script, o para acceder a un directorio y usar comandos como cd.
+
+Los permisos se dividen en tres categorías principales: usuario propietario del archivo, grupo al que pertenece el usuario propietario y otros usuarios.
+
+Lectura (r): Permite visualizar el contenido de un archivo o directorio.
+Escritura (w): Permite modificar el contenido de un archivo o directorio.
+Ejecución (x): Permite ejecutar un archivo como una aplicación o script, o acceder a un directorio y usar comandos como cd.
+
+Ejemplos
+Archivo con permiso de lectura pero sin permiso de ejecución:
+Un usuario puede leer el contenido del archivo pero no puede ejecutarlo.
+
+Ejemplo: chmod 400 archivo.txt (permiso de lectura solo para el propietario).
+Archivo con permiso de ejecución pero sin permiso de lectura:
+Un usuario puede ejecutar el archivo pero no puede leer su contenido.
+
+Ejemplo: chmod 100 archivo.sh (permiso de ejecución solo para el propietario).
+Archivo con permisos de lectura y ejecución:
+Un usuario puede leer el contenido del archivo y también ejecutarlo.
+
+Ejemplo: chmod 500 archivo.sh (permisos de lectura y ejecución para el propietario).
+Directorio con permiso de lectura pero sin permiso de ejecución:
+Un usuario puede listar los archivos y subdirectorios dentro del directorio pero no puede acceder a ellos ni cambiar a ese directorio.
+
+Ejemplo: chmod 400 directorio (permiso de lectura solo para el propietario).
+Directorio con permiso de ejecución pero sin permiso de lectura:
+Un usuario puede acceder al directorio y a sus subdirectorios pero no puede listar los archivos dentro del directorio.
+
+Ejemplo: chmod 100 directorio (permiso de ejecución solo para el propietario).
+Directorio con permisos de lectura y ejecución:
+Un usuario puede listar los archivos y subdirectorios dentro del directorio y también acceder a ellos.
+
+Ejemplo: chmod 500 directorio (permisos de lectura y ejecución para el propietario).
