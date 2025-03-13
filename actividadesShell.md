@@ -90,3 +90,49 @@
    chmod +x practica5.sh
    ./practica5.sh
 
+
+
+Comando	Descripción
+nano practica2.sh	Abre el editor de texto nano para crear o editar un archivo llamado practica2.sh.
+
+#!/bin/bash	Especifica que el script debe ejecutarse con el intérprete Bash.
+
+touch archivo1.txt	Crea un archivo vacío llamado archivo1.txt.
+
+echo "Hola" > archivo1.txt	Escribe el texto "Hola" dentro del archivo archivo1.txt. Si el archivo ya existe, lo sobrescribe.
+
+cp archivo1.txt archivo_copia.txt	Copia el archivo archivo1.txt y lo guarda con el nombre archivo_copia.txt.
+
+mkdir -p practica_shell/backup	Crea un directorio llamado backup dentro de practica_shell. La opción -p evita errores si ya existe.
+
+mv archivo_copia.txt practica_shell/backup/	Mueve el archivo archivo_copia.txt al directorio practica_shell/backup/.
+
+rm archivo1.txt	Elimina el archivo archivo1.txt.
+
+ls practica_shell/backup/	Lista el contenido del directorio practica_shell/backup/.
+
+chmod +x practica2.sh	Otorga permisos de ejecución al archivo practica2.sh.
+
+./practica2.sh	Ejecuta el script practica2.sh en el directorio actual.
+
+touch notas{1..5}.txt	Crea cinco archivos: nota1.txt, nota2.txt, nota3.txt, nota4.txt, 
+nota5.txt.
+
+chmod 500 cleanSystem.sh	Permisos: Solo el propietario puede leer (r) y ejecutar (x) el archivo cleanSystem.sh.
+
+chmod 754 findData.sh	Permisos: Propietario rwx, grupo r-x, otros r-- para el archivo findData.sh.
+
+mv ExamCopia.txt ~/Documentos/Tareas/	Mueve el archivo ExamCopia.txt al directorio Tareas dentro de ~/Documentos/.
+
+ls -l	Muestra los permisos detallados, el propietario, el grupo, el tamaño y la fecha de los archivos.
+
+mkdir -p ~/Documentos/Tareas	Crea el directorio Tareas dentro de ~/Documentos (incluyendo cualquier subdirectorio faltante).
+
+chmod +t nombre_del_directorio	Activa el Sticky Bit, evitando que otros usuarios 
+eliminen archivos que no les pertenecen.
+
+chmod -t nombre_del_directorio	Desactiva el Sticky Bit.
+
+ls -ld nombre_del_directorio	Muestra los permisos del directorio, incluyendo si tiene el Sticky Bit (t).
+
+chmod 1777 carpeta	Permisos: Todos los usuarios tienen acceso completo (rwx) + Sticky Bit.
