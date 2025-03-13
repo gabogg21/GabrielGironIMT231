@@ -1,0 +1,94 @@
+Archivo de Respuestas: respuestas.txt
+
+Datos del Estudiante
+- Nombre Completo: Gabriel EFrain Giron Calle 
+- URL de GitHub de la carpeta del examen:
+
+---
+
+## Tarea 1: Navegación y Creación de Carpetas
+
+- Permiso octal usado para restaurar permiso minimo de la carpeta primerParcial:
+Lo minimo es dar el permiso "chmod 766 primerParcial231" para que el usuario pueda tener
+control sobre el archivo y q los demas usuarios solo puedan leerlo y escribir 
+
+- Comandos usados y justificaciones : 
+1.- Luego para crear la carpeta Tarea1 y la subcarpeta extrafolder usamos el comando:
+" mkdir -p Tarea1/extraFolder " usamos el -p para evitar problemas en caso de que el
+directorio ya exista. Tambien utilizamos el comando " touch notesExtra.txt. " para crear el
+archivo de texto correspondiente
+2.- Finalmente para registrar la fecha de la tarea creamos un archivo de texto:
+" touch fechaTarea1.txt " y para ponerle la fecha usamos le comando: "date > fechaTarea1.txt "
+
+
+---
+
+## Tarea 2: Permisos en Formato Octal
+- Permiso octal usado para esta tarea : " chmod 700 mainConfig.cfg " use este comando porque
+el usuario para poder verificar el correcto funcionamiento del archivo debe poder ejecutarlo
+aparte de poder leer y escribir
+- Comandos usados y justificaciones :
+1.-Para registrar la fecha de la tarea creamos un archivo de texto:
+" touch fechatarea2.txt " y para ponerle la fecha usamos le comando: "date > fechatarea2.txt "
+2.- Para escribir 2 lineas en al archivo use:
+echo "Hola mi nombre es Gabriel Giron calle" > mainConfig.cfg 
+echo "Espero aprobar este examen" >> mainConfig.cfg
+
+---
+## Tarea 3: Scripting Básico 
+- Permiso octal usado para el `basicScript.sh`:  use el comando:
+"chmod 754 basicScript.sh" use este comando porque el usuario y el grupo deben poder ver 
+el archivo ejecutado para verificar su correcto funcionamiento, ademas el usuario principal
+debe poder modificar el script para cumplir con la orden dada.
+
+- Comandos usados y justificaciones : 
+
+Para editar el archivo de manera mas comoda use el "nano basicScript" dentro del scrip coloque:
+#!/bin/bash
+echo "Bienvenido al script del examen"
+echo "Porfavor ingrese su nombre:"
+read nombre
+echo "Hola, $nombre"
+echo "El contenido de la carpeta tarea3 es:"
+posteriorme cree la carpeta pedida con: "mkdir -p Ubicaciones" luego dentro de esa carpeta
+"cd Ubicaciones" cree el archivo: "touch ubicacion.txt"
+luego escribi los detalles finales en el script con:
+echo 'tree' >> basicScript.sh
+echo 'echo "Ha finalizado el script"' >> basicScript
+
+
+## Tarea 4: Edición con nano o vim 
+
+- para que usamos el comando `cat` ?: el comando cat nos indica el contenido que se encuentra
+en un archivo en la terminal
+
+- Comandos usados y justificaciones :
+use el comando nano infoDocument.txt para editar el archivo
+para el contenido lo que hice fue ejecutar todos los archivos en terminal y despues pegar
+la salida en el infoDocument:
+date
+jue 13 mar 2025 12:10:50 -04
+
+whoami
+gabubugiron
+
+uname -r
+6.8.0-52-generic
+
+cat /etc/osrelease
+Ubuntu 22.04 LTS
+
+El comentario personal lo escribi directamente
+para guardar los cambios en la terminal nano usamos: crtl x, s y enter para guardar
+el archivo con el mismo nombre
+---
+## Tarea 5: Final
+
+- para que usamos el comando `tree -p` y para que su argumento `-p` ?: el "-p" al lado 
+de tree se usa para mostrar los permisos asignados a cada subcarpeta y archivo del directorio 
+el comandop tree en sì sirve para mostrar en formato de "arbol" con sus ramas 
+el contenido de un directorio
+- Permiso octal para `entregaFinal.txt`: chmod 555 entregaFinal
+
+- Comandos usados y justificaciones :
+
