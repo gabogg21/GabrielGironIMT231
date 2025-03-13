@@ -1,23 +1,25 @@
-.
-├── entregaFinal.txt
-├── readmeExam.md
-├── readmeExam.pdf
-├── respuestas.txt
-├── Tarea1
-│   └── extraFolder
-│       ├── fechaTarea1.txt
-│       └── notesExtra.txt.
-├── tarea2
-│   ├── fechatarea2.txt
-│   └── mainConfig.cfg
-├── tarea3
-│   ├── basicScript.sh
-│   ├── fechatarea3.txt
-│   └── Ubicaciones
-│       └── ubicacion.txt
-├── tarea4
-│   ├── fechaTarea4acabada.txt
-│   └── infoDocument.txt
-└── tarea5
+[drwxrwxrwx]  .
+├── [-rw-rw-r--]  entregafinal.txt
+├── [-rwxrwxrwx]  readmeExam.md
+├── [-rwxrwxrwx]  readmeExam.pdf
+├── [-rwxrwxrwx]  respuestas.txt
+├── [drwxrwxrwx]  Tarea1
+│   └── [drwxrwxrwx]  extraFolder
+│       ├── [-rwxrwxrwx]  fechaTarea1.txt
+│       └── [-rwxrwxrwx]  notesExtra.txt.
+├── [drwxrwxrwx]  tarea2
+│   ├── [-rw-rw-r--]  fechatarea2.txt
+│   └── [-rwx------]  mainConfig.cfg
+├── [drwxrwxrwx]  tarea3
+│   ├── [-rwxr-xr--]  basicScript.sh
+│   ├── [-rw-rw-r--]  fechatarea3.txt
+│   └── [drwxrwxr-x]  Ubicaciones
+│       └── [-rw-rw-r--]  ubicacion.txt
+├── [drwxrwxrwx]  tarea4
+│   ├── [-rw-rw-r--]  fechaTarea4acabada.txt
+│   └── [-rwxrwxrwx]  infoDocument.txt
+└── [drwxr-xr-x]  tarea5
+    ├── [-r-xr-xr-x]  entregaFinal.txt
+    └── [-rw-rw-r--]  fechatarea5acabada.txt
 
-8 directories, 13 files
+8 directories, 15 files

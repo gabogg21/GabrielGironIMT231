@@ -2,8 +2,7 @@ Archivo de Respuestas: respuestas.txt
 
 Datos del Estudiante
 - Nombre Completo: Gabriel EFrain Giron Calle 
-- URL de GitHub de la carpeta del examen:
-
+- URL de GitHub de la carpeta del examen: 
 ---
 
 ## Tarea 1: Navegación y Creación de Carpetas
