@@ -1,0 +1,246 @@
+En la terminal de Linux, puedes mover archivos y carpetas usando el comando `mv`. Aquí tienes los usos más comunes:
+
+### **Mover un archivo**
+```bash
+mv archivo.txt /ruta/destino/
+```
+Mueve `archivo.txt` a la carpeta `/ruta/destino/`.
+
+### **Renombrar un archivo**
+```bash
+mv archivo_viejo.txt archivo_nuevo.txt
+```
+Renombra `archivo_viejo.txt` a `archivo_nuevo.txt`.
+
+### **Mover varios archivos a una carpeta**
+```bash
+mv archivo1.txt archivo2.txt /ruta/destino/
+```
+Mueve `archivo1.txt` y `archivo2.txt` a `/ruta/destino/`.
+
+### **Mover una carpeta completa**
+```bash
+mv carpeta /ruta/destino/
+```
+Mueve la carpeta `carpeta` dentro de `/ruta/destino/`.
+
+### **Mover y sobrescribir sin confirmación**
+```bash
+mv -f archivo.txt /ruta/destino/
+```
+Mueve el archivo y sobrescribe si ya existe.
+
+### **Pedir confirmación antes de sobrescribir**
+```bash
+mv -i archivo.txt /ruta/destino/
+```
+Si el archivo ya existe en `/ruta/destino/`, pedirá confirmación antes de sobrescribirlo.
+
+### **Mostrar detalles del movimiento**
+```bash
+mv -v archivo.txt /ruta/destino/
+```
+Muestra información sobre la operación realizada.
+
+Si necesitas más opciones o ayuda, puedes consultar el manual con:
+```bash
+man mv
+```
+Eliminar un archivo
+
+rm archivo.txt
+
+Elimina archivo.txt.
+Eliminar varios archivos
+
+rm archivo1.txt archivo2.txt
+
+Elimina archivo1.txt y archivo2.txt.
+Eliminar un archivo con confirmación
+
+rm -i archivo.txt
+
+Pide confirmación antes de eliminar archivo.txt.
+Eliminar todos los archivos en un directorio
+
+rm -r /ruta/del/directorio/*
+
+Elimina todos los archivos dentro de /ruta/del/directorio/ pero deja la carpeta.
+Eliminar carpetas
+Eliminar una carpeta vacía
+
+rmdir carpeta
+
+Elimina carpeta solo si está vacía.
+Eliminar una carpeta con todo su contenido
+
+rm -r carpeta/
+
+Elimina carpeta y todo lo que contiene.
+Eliminar sin pedir confirmación
+
+rm -rf carpeta/
+
+Elimina carpeta y todo su contenido sin pedir confirmación.
+
+⚠ ¡Cuidado con rm -rf! Puede eliminar archivos y carpetas sin posibilidad de recuperación.
+
+En Linux, puedes cambiar los permisos de archivos y carpetas con el comando `chmod`. Aquí tienes los usos más comunes:
+------------------------------------------------------------------------------------------------------------------------------------------------------
+---
+
+## **1. Usando valores numéricos (modo octal)**  
+Cada permiso se representa con un número:
+- **4** = Lectura (**r**)
+- **2** = Escritura (**w**)
+- **1** = Ejecución (**x**)
+
+Se suman los valores para cada grupo:  
+`chmod XYZ archivo`  
+- **X** → Usuario (propietario)  
+- **Y** → Grupo  
+- **Z** → Otros  
+
+### **Ejemplos:**
+- **Dar todos los permisos al propietario, lectura y ejecución al grupo y otros:**
+  ```bash
+  chmod 755 archivo.txt
+  ```
+- **Dar solo permisos de lectura y escritura al propietario, y solo lectura a los demás:**
+  ```bash
+  chmod 644 archivo.txt
+  ```
+
+---
+
+## **2. Usando símbolos (+, -, =)**
+- `+` → Agregar permiso  
+- `-` → Quitar permiso  
+- `=` → Establecer permisos exactos  
+
+### **Ejemplos:**
+- **Dar permiso de ejecución al propietario:**
+  ```bash
+  chmod u+x script.sh
+  ```
+- **Quitar permiso de escritura a "otros":**
+  ```bash
+  chmod o-w archivo.txt
+  ```
+- **Dar permisos de lectura y escritura a todos:**
+  ```bash
+  chmod a+rw archivo.txt
+  ```
+- **Eliminar todos los permisos para "grupo" y "otros":**
+  ```bash
+  chmod go= archivo.txt
+  ```
+
+---
+
+## **3. Cambiar permisos de carpetas**
+Si necesitas aplicar permisos a una carpeta y su contenido de forma recursiva:
+```bash
+chmod -R 755 carpeta/
+```
+Esto aplica `755` a `carpeta/` y todos sus archivos y subcarpetas.
+
+---
+
+Para más información, puedes usar:
+```bash
+man chmod
+```
+----------------------------------------------------------------------------------------------------------------------------
+1. Opción -p
+
+La opción -p se usa en varios comandos para diferentes propósitos. Aquí algunos ejemplos:
+📂 En mkdir: Crear directorios anidados
+
+mkdir -p ruta/a/una/carpeta
+
+🔹 Crea la carpeta carpeta dentro de ruta/a/una/. Si los directorios intermedios (ruta/a/una/) no existen, también los crea.
+🔹 Sin -p, el comando fallaría si los directorios intermedios no existen.
+📂 En cp: Copiar manteniendo la estructura de carpetas
+
+cp -p archivo.txt /ruta/destino/
+
+🔹 Mantiene los permisos, la fecha de modificación y la propiedad del archivo.
+📂 En rm: Eliminar una jerarquía de directorios (poco común)
+
+rm -p ruta/a/una/carpeta
+
+🔹 Intenta eliminar los directorios superiores si quedan vacíos tras eliminar el contenido.
+2. Símbolo ~ (tilde)
+
+El símbolo ~ representa el directorio personal del usuario actual (home).
+📂 Ejemplos de uso
+Comando	Explicación
+cd ~	Va al directorio personal (/home/usuario).
+cd ~/Documentos	Accede a la carpeta Documentos dentro del home.
+ls ~	Lista los archivos en el home.
+cp archivo.txt ~/	Copia archivo.txt al home.
+
+💡 En sistemas Linux con múltiples usuarios, ~usuario representa el home de otro usuario.
+Ejemplo:
+
+cd ~edgar
+
+🔹 Iría al home del usuario edgar, si tienes permiso.
+
+Puedes combinar `-p` y `~` en comandos para trabajar con directorios dentro de tu **home** de manera eficiente. Aquí algunos ejemplos:
+
+---
+
+
+
+---------------------------------------------------------------------------------
+
+### **📂 Crear una carpeta dentro del home**
+```bash
+mkdir -p ~/proyectos/arduino
+```
+🔹 Crea la carpeta `arduino` dentro de `~/proyectos/`, incluso si `proyectos/` no existe.  
+
+---
+
+### **📂 Copiar archivos manteniendo permisos en el home**
+```bash
+cp -p archivo.txt ~/Documentos/
+```
+🔹 Copia `archivo.txt` a la carpeta `Documentos` dentro del home y mantiene permisos, propietario y fecha de modificación.  
+
+---
+
+### **📂 Mover archivos y crear directorios si no existen**
+```bash
+mv archivo.txt ~/backup/2025/
+```
+🔹 Si `~/backup/2025/` no existe, el comando fallará.  
+🔹 Para evitarlo, úsalo con `mkdir -p`:  
+```bash
+mkdir -p ~/backup/2025/ && mv archivo.txt ~/backup/2025/
+```
+🔹 Esto crea la carpeta si no existe antes de mover el archivo.  
+
+---
+
+### **📂 Eliminar una carpeta en el home si queda vacía**
+```bash
+rm -p ~/proyectos/arduino
+```
+🔹 Borra la carpeta `arduino`, y si `proyectos/` queda vacío, lo elimina también.  
+🔹 Es poco común; normalmente usarías:  
+```bash
+rm -r ~/proyectos/arduino
+```
+para eliminar con todo su contenido.  
+
+---
+
+### **📌 Resumen**
+✅ **`~`** te permite trabajar directamente en el home sin escribir la ruta completa.  
+✅ **`-p`** es útil para crear directorios anidados o preservar atributos al copiar.  
+✅ **Juntos**, ayudan a organizar y gestionar archivos sin errores.  
+
+Si tienes una situación específica en mente, dime y te ayudo a mejorar el comando. 🚀
